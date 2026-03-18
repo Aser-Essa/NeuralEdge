@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import {
   Zap,
@@ -9,6 +8,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import ScrollToTopButton from "./ui/ScrollToTopButton";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -118,12 +118,7 @@ export default function Footer() {
           <p className="text-xs">
             © {currentYear} NeuralEdge. All Rights Reserved.
           </p>
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-xs font-semibold flex items-center gap-2 hover:text-white transition-colors"
-          >
-            Back to Top <span className="text-primary">↑</span>
-          </button>
+          <ScrollToTopButton />
         </div>
       </div>
     </footer>

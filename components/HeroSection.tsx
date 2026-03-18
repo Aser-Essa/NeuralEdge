@@ -34,7 +34,7 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 animate-bounce-slow">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-bold uppercase tracking-widest">
-              🤖 AI-Powered Platform
+              Smart Automation Platform
             </span>
           </div>
 
@@ -95,7 +95,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="z-10"
+            className="z-20"
           >
             <PhoneMockup />
           </motion.div>
@@ -146,7 +146,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Decorative Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/20 rounded-full blur-[100px] -z-10" />
+          <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/20 rounded-full opacity-60 blur-[100px]" />
         </motion.div>
       </div>
     </section>

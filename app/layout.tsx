@@ -6,7 +6,8 @@ import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "NeuralEdge | AI That Thinks Ahead",
-  description: "Empowering Your Business with Smart Automation and AI-Powered Insights.",
+  description:
+    "Empowering Your Business with Smart Automation and AI-Powered Insights.",
 };
 
 export default function RootLayout({
@@ -18,9 +19,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="antialiased font-sans bg-bg-light text-text-primary">
         <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
         <Toaster position="bottom-right" />
       </body>

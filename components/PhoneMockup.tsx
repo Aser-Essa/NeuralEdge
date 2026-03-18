@@ -1,13 +1,11 @@
-'use client'
-import { motion } from 'framer-motion'
-import { Zap, Bell, TrendingUp, User } from 'lucide-react'
+import { Bell, TrendingUp, User, Zap } from "lucide-react";
 
 export default function PhoneMockup() {
   return (
     <div className="relative mx-auto w-[280px] h-[580px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-strong overflow-hidden">
       {/* Notch */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-2xl z-20" />
-      
+
       {/* App UI */}
       <div className="absolute inset-0 bg-white p-4 pt-10 flex flex-col gap-4">
         {/* Header */}
@@ -23,9 +21,15 @@ export default function PhoneMockup() {
 
         {/* Hero Card */}
         <div className="bg-linear-to-br from-primary to-primary-light rounded-2xl p-4 text-white space-y-2 shadow-lg">
-          <p className="text-[10px] opacity-80 uppercase tracking-wider font-bold">Smart Insights</p>
-          <h3 className="font-bold text-sm leading-tight">Your AI Assistant is ready.</h3>
-          <p className="text-[10px] opacity-90">What can I do for you today, Mark?</p>
+          <p className="text-[10px] opacity-80 uppercase tracking-wider font-bold">
+            Smart Insights
+          </p>
+          <h3 className="font-bold text-sm leading-tight">
+            Your AI Assistant is ready.
+          </h3>
+          <p className="text-[10px] opacity-90">
+            What can I do for you today, Mark?
+          </p>
         </div>
 
         {/* Stats Grid */}
@@ -44,14 +48,21 @@ export default function PhoneMockup() {
 
         {/* Activity Feed */}
         <div className="space-y-3">
-          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest pt-2">Recent Activity</p>
+          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest pt-2">
+            Recent Activity
+          </p>
           {[1, 2, 3].map((i) => (
-            <div key={i} className="flex items-center gap-3 p-2 rounded-xl border border-gray-50 bg-gray-50/50">
+            <div
+              key={i}
+              className="flex items-center gap-3 p-2 rounded-xl border border-gray-50 bg-gray-50/50"
+            >
               <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-primary">
                 <User size={14} />
               </div>
               <div className="overflow-hidden">
-                <p className="text-[10px] font-bold truncate">Lead automated via AI</p>
+                <p className="text-[10px] font-bold truncate">
+                  Lead automated via AI
+                </p>
                 <p className="text-[8px] text-gray-400">2 mins ago</p>
               </div>
             </div>
@@ -61,5 +72,5 @@ export default function PhoneMockup() {
 
       {/* Floating Elements around phone (handled in HeroVisual) */}
     </div>
-  )
+  );
 }

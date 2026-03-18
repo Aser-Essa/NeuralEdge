@@ -1,19 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import {
-  Bot,
-  BarChart,
-  Plug,
-  TrendingUp,
-  MessageSquare,
-  Shield,
-  Cloud,
-  Zap,
-  Check,
-  X,
-} from "lucide-react";
-import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { BarChart, Bot, Check, Plug, Shield, X } from "lucide-react";
 
 const features = [
   {
