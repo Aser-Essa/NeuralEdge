@@ -14,7 +14,7 @@ const tools = [
 
 export default function AIToolsShowcase() {
   return (
-    <section className="py-24 bg-gradient-to-br from-[#0B0E1A] to-[#1A2040] text-white overflow-hidden">
+    <section className="py-24 bg-linear-to-br from-[#0B0E1A] to-[#1A2040] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -46,7 +46,7 @@ export default function AIToolsShowcase() {
                   transition={{ delay: i * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-glow">
+                  <div className="w-6 h-6 rounded-full bg-linear-to-br from-primary to-primary-light flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-glow">
                     <CheckCircle2 size={14} />
                   </div>
                   <span className="text-gray-200 font-medium">{tool}</span>
@@ -59,7 +59,7 @@ export default function AIToolsShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm"
+              className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xs"
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary-light shrink-0">
@@ -100,7 +100,7 @@ export default function AIToolsShowcase() {
             </motion.div>
 
             {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-primary/20 rounded-full blur-[100px] -z-0" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-primary/20 rounded-full blur-[100px] z-0" />
           </motion.div>
         </div>
       </div>

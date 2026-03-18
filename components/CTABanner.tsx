@@ -6,14 +6,14 @@ import Link from 'next/link'
 export default function CTABanner() {
   return (
     <section className="py-24 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto relative bg-gradient-to-br from-[#0B0E1A] to-[#1A2040] rounded-[3rem] p-12 md:p-20 overflow-hidden isolate shadow-strong">
+      <div className="max-w-7xl mx-auto relative bg-linear-to-br from-[#0B0E1A] to-[#1A2040] rounded-[3rem] p-12 md:p-20 overflow-hidden isolate shadow-strong">
         
         {/* Glow Sphere */}
         <div className="absolute -top-20 -right-20 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[100px] -z-10" />
         <motion.div 
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -top-10 right-20 w-32 h-32 bg-gradient-to-br from-primary to-primary-light rounded-full shadow-glow -z-10 opacity-50" 
+          className="absolute -top-10 right-20 w-32 h-32 bg-linear-to-br from-primary to-primary-light rounded-full shadow-glow -z-10 opacity-50" 
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -52,7 +52,7 @@ export default function CTABanner() {
             className="hidden lg:flex justify-end relative"
           >
             {/* 3D Orb Effect with CSS */}
-            <div className="relative w-80 h-80 rounded-full bg-gradient-to-br from-primary to-primary-light p-1 shadow-glow animate-pulse-slow">
+            <div className="relative w-80 h-80 rounded-full bg-linear-to-br from-primary to-primary-light p-1 shadow-glow animate-pulse-slow">
               <div className="w-full h-full rounded-full bg-dark flex items-center justify-center p-8 text-center border-4 border-white/10 overflow-hidden isolate">
                 <div className="absolute inset-0 bg-primary/20 blur-2xl" />
                 <p className="relative z-10 text-2xl font-extrabold font-heading text-white">Neural<br/>Edge</p>

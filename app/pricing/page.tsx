@@ -88,7 +88,7 @@ export default function PricingPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <SectionLabel>Pricing Plans</SectionLabel>
-          <h1 className="text-5xl md:text-7xl font-extrabold font-heading text-dark leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold font-heading text-dark leading-none">
             Fair Pricing for <br />
             <span className="gradient-text">Infinite Potential</span>
           </h1>
@@ -144,7 +144,7 @@ export default function PricingPage() {
                 className={cn(
                   "p-10 rounded-[2.5rem] border transition-all duration-300",
                   plan.highlighted
-                    ? "bg-gradient-to-br from-primary to-primary-light text-white shadow-strong scale-105 z-10 border-transparent"
+                    ? "bg-linear-to-br from-primary to-primary-light text-white shadow-strong scale-105 z-10 border-transparent"
                     : "bg-white border-blue-100 text-dark shadow-card",
                 )}
               >
@@ -228,7 +228,7 @@ export default function PricingPage() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-blue-50 overflow-hidden shadow-sm"
+                className="bg-white rounded-2xl border border-blue-50 overflow-hidden shadow-xs"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}

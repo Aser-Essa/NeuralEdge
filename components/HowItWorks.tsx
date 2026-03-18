@@ -35,7 +35,7 @@ const steps = [
     mockup: (
       <div className="mt-8 space-y-3">
         {[1, 2].map(i => (
-          <div key={i} className="p-3 bg-white rounded-xl border border-blue-50 shadow-sm flex items-center gap-3">
+          <div key={i} className="p-3 bg-white rounded-xl border border-blue-50 shadow-xs flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-mint">
               <BellCheck size={16} />
             </div>
@@ -54,7 +54,7 @@ const steps = [
     description: "Approve the recommendations and let our agents handle the tasks autonomously.",
     icon: ToggleRight,
     mockup: (
-      <div className="mt-8 p-4 bg-white rounded-2xl border border-blue-50 shadow-sm">
+      <div className="mt-8 p-4 bg-white rounded-2xl border border-blue-50 shadow-xs">
         <div className="flex items-center justify-between mb-4">
           <span className="text-[10px] font-bold text-dark">Auto-Pilot Mode</span>
           <div className="w-10 h-5 bg-primary rounded-full relative">
@@ -83,7 +83,7 @@ export default function HowItWorks() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative">
           {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-[28px] left-[10%] right-[10%] h-[2px] border-t-2 border-dashed border-primary/20 -z-0" />
+          <div className="hidden lg:block absolute top-[28px] left-[10%] right-[10%] h-[2px] border-t-2 border-dashed border-primary/20 z-0" />
 
           {steps.map((step, idx) => (
             <motion.div
@@ -94,7 +94,7 @@ export default function HowItWorks() {
               transition={{ duration: 0.6, delay: idx * 0.2 }}
               className="relative z-10 flex flex-col items-center text-center"
             >
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white text-xl font-bold shadow-glow mb-8">
+              <div className="w-14 h-14 rounded-full bg-linear-to-br from-primary to-primary-light flex items-center justify-center text-white text-xl font-bold shadow-glow mb-8">
                 {step.number}
               </div>
               <h3 className="text-2xl font-bold text-dark mb-4">{step.title}</h3>

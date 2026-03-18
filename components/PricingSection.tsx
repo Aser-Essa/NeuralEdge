@@ -79,7 +79,7 @@ export default function PricingSection() {
               className={cn(
                 "relative p-10 rounded-[2.5rem] border transition-all duration-300",
                 plan.highlighted
-                  ? "bg-gradient-to-br from-primary to-primary-light text-white shadow-strong scale-105 z-10 border-transparent"
+                  ? "bg-linear-to-br from-primary to-primary-light text-white shadow-strong scale-105 z-10 border-transparent"
                   : plan?.dark
                     ? "bg-white border-gray-800 text-dark shadow-card"
                     : "bg-white border-blue-100 text-dark shadow-card",

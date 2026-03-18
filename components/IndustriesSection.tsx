@@ -90,13 +90,13 @@ export default function IndustriesSection() {
                       initial={{ height: 0 }}
                       whileInView={{ height: `${h}%` }}
                       transition={{ delay: i * 0.1, duration: 0.8 }}
-                      className="flex-1 bg-gradient-to-t from-primary to-primary-light rounded-t-lg"
+                      className="flex-1 bg-linear-to-t from-primary to-primary-light rounded-t-lg"
                     />
                   ))}
                 </div>
               </div>
               {/* Decorative element */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-yellow-100 rounded-full blur-2xl -z-0 opacity-50" />
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-yellow-100 rounded-full blur-2xl z-0 opacity-50" />
             </div>
           </div>
         </motion.div>
@@ -111,9 +111,9 @@ export default function IndustriesSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
               whileHover={{ y: -6 }}
-              className="bg-white p-8 rounded-[2rem] border border-blue-50 shadow-card hover:shadow-strong transition-all duration-300"
+              className="bg-white p-8 rounded-4xl border border-blue-50 shadow-card hover:shadow-strong transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white mb-6 shadow-glow">
+              <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-primary to-primary-light flex items-center justify-center text-white mb-6 shadow-glow">
                 <industry.icon size={28} />
               </div>
               <h4 className="text-xl font-bold text-dark mb-2">{industry.title}</h4>

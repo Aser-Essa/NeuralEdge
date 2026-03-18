@@ -4,7 +4,7 @@ import { Zap, Bell, TrendingUp, User } from 'lucide-react'
 
 export default function PhoneMockup() {
   return (
-    <div className="relative mx-auto w-[280px] h-[580px] bg-slate-900 rounded-[3rem] border-[8px] border-slate-800 shadow-strong overflow-hidden">
+    <div className="relative mx-auto w-[280px] h-[580px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-strong overflow-hidden">
       {/* Notch */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-2xl z-20" />
       
@@ -22,7 +22,7 @@ export default function PhoneMockup() {
         </div>
 
         {/* Hero Card */}
-        <div className="bg-gradient-to-br from-primary to-primary-light rounded-2xl p-4 text-white space-y-2 shadow-lg">
+        <div className="bg-linear-to-br from-primary to-primary-light rounded-2xl p-4 text-white space-y-2 shadow-lg">
           <p className="text-[10px] opacity-80 uppercase tracking-wider font-bold">Smart Insights</p>
           <h3 className="font-bold text-sm leading-tight">Your AI Assistant is ready.</h3>
           <p className="text-[10px] opacity-90">What can I do for you today, Mark?</p>

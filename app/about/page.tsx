@@ -51,7 +51,7 @@ export default function AboutPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <SectionLabel>Our Story</SectionLabel>
-          <h1 className="text-5xl md:text-7xl font-extrabold font-heading text-dark leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold font-heading text-dark leading-none">
             We&apos;re on a Mission to <br />
             <span className="gradient-text">Humanize AI</span>
           </h1>
@@ -75,7 +75,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-3xl bg-bg-light text-center border border-blue-50 shadow-sm"
+                className="p-8 rounded-3xl bg-bg-light text-center border border-blue-50 shadow-xs"
               >
                 <p className="text-4xl font-extrabold text-primary mb-2">
                   <AnimatedCounter target={stat.target} suffix={stat.suffix} />
@@ -105,7 +105,7 @@ export default function AboutPage() {
                 whileHover={{ y: -6 }}
                 className="bg-white p-8 rounded-3xl border border-blue-50 shadow-card flex items-center gap-6"
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white font-bold text-xl shrink-0">
+                <div className="w-16 h-16 rounded-full bg-linear-to-br from-primary to-primary-light flex items-center justify-center text-white font-bold text-xl shrink-0">
                   {member.avatar}
                 </div>
                 <div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="py-24 bg-dark text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -z-0" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] z-0" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
               {values.map((v, i) => (
                 <div
                   key={i}
-                  className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                  className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xs"
                 >
                   <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary-light mb-4">
                     <v.icon size={20} />

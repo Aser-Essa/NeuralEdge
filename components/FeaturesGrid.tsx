@@ -88,7 +88,7 @@ export default function FeaturesGrid() {
               whileHover={{ y: -6 }}
               className="p-8 rounded-3xl bg-white border border-blue-50 shadow-card transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-glow">
+              <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-primary to-primary-light flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-glow">
                 <feature.icon size={28} />
               </div>
               <h3 className="text-xl font-bold text-dark mb-3 leading-tight">{feature.title}</h3>

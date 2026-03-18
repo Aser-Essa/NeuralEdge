@@ -43,7 +43,7 @@ export default function ContactPage() {
           <div className="space-y-12">
             <div>
               <SectionLabel>Contact Us</SectionLabel>
-              <h1 className="text-5xl md:text-6xl font-extrabold font-heading text-dark leading-tight mt-6">
+              <h1 className="text-5xl md:text-6xl font-extrabold font-heading text-dark leading-none mt-6">
                 Let&apos;s Build the <br />
                 <span className="gradient-text">Next Frontier</span> Together
               </h1>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   <a
                     key={i}
                     href="#"
-                    className="w-12 h-12 rounded-2xl bg-bg-light border border-blue-50 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-gray-400 shadow-sm"
+                    className="w-12 h-12 rounded-2xl bg-bg-light border border-blue-50 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-gray-400 shadow-xs"
                   >
                     <Icon size={20} />
                   </a>
@@ -113,7 +113,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, scale: 1 }}
             className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-blue-50 shadow-strong relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -z-0" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl z-0" />
 
             <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -125,7 +125,7 @@ export default function ContactPage() {
                     required
                     type="text"
                     placeholder="John Doe"
-                    className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-none transition-all placeholder:text-gray-300"
+                    className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-hidden transition-all placeholder:text-gray-300"
                   />
                 </div>
                 <div className="space-y-2">
@@ -136,7 +136,7 @@ export default function ContactPage() {
                     required
                     type="email"
                     placeholder="john@example.com"
-                    className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-none transition-all placeholder:text-gray-300"
+                    className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-hidden transition-all placeholder:text-gray-300"
                   />
                 </div>
               </div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   placeholder="NeuralEdge Inc."
-                  className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-none transition-all placeholder:text-gray-300"
+                  className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-hidden transition-all placeholder:text-gray-300"
                 />
               </div>
 
@@ -158,7 +158,7 @@ export default function ContactPage() {
                 </label>
                 <select
                   defaultValue="Pro Plan"
-                  className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-none transition-all text-gray-500"
+                  className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-hidden transition-all text-gray-500"
                 >
                   <option>Starter Plan</option>
                   <option>Pro Plan</option>
@@ -174,7 +174,7 @@ export default function ContactPage() {
                   required
                   rows={4}
                   placeholder="How can we help your business?"
-                  className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-none transition-all placeholder:text-gray-300 resize-none"
+                  className="w-full px-6 py-4 rounded-2xl bg-bg-light border border-blue-50 focus:border-primary outline-hidden transition-all placeholder:text-gray-300 resize-none"
                 />
               </div>
 

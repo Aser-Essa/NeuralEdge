@@ -50,7 +50,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white">
+              <div className="w-10 h-10 rounded-xl bg-linear-to-br from-primary to-primary-light flex items-center justify-center text-white">
                 <Zap size={20} fill="currentColor" />
               </div>
               <span className="text-xl font-extrabold font-heading tracking-tight text-white">

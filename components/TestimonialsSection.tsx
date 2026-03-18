@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
               whileHover={{ y: -6 }}
-              className="bg-white p-8 rounded-[2rem] border border-blue-50 shadow-card hover:shadow-strong transition-all duration-300 relative group"
+              className="bg-white p-8 rounded-4xl border border-blue-50 shadow-card hover:shadow-strong transition-all duration-300 relative group"
             >
               <div className={cn(
                 "absolute top-6 right-6 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest",

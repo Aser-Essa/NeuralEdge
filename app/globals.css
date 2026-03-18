@@ -1,8 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #4f6ef7;
+  --color-primary-light: #7b96ff;
+  --color-accent: #f5c842;
+  --color-mint: #3ddc97;
+  --color-dark: #0b0e1a;
+
+  --color-bg-dark: #0b0e1a;
+  --color-bg-light: #f4f7ff;
+  --color-bg-card: #ffffff;
+
+  --color-text-primary: #0d1117;
+  --color-text-secondary: #6b7280;
+  --color-text-onDark: #e8eeff;
+
+  --font-sans: Inter, DM Sans, sans-serif;
+  --font-heading: Plus Jakarta Sans, sans-serif;
+  --font-mono: Space Mono, monospace;
+
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-radius-lg: 24px;
+
+  --shadow-card: 0 4px 24px rgba(79, 110, 247, 0.1);
+  --shadow-strong: 0 8px 40px rgba(79, 110, 247, 0.18);
+  --shadow-glow: 0 0 32px rgba(79, 110, 247, 0.35);
+
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s ease-in-out infinite;
+
+  --background-image-gradient-hero: linear-gradient(
+    135deg,
+    #e8eeff 0%,
+    #f4f7ff 60%,
+    #d9e4ff 100%
+  );
+  --background-image-gradient-blue: linear-gradient(135deg, #4f6ef7, #7b96ff);
+  --background-image-gradient-cta: linear-gradient(
+    135deg,
+    #0b0e1a 0%,
+    #1a2040 100%
+  );
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root {
   --primary: #4f6ef7;

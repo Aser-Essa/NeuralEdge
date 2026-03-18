@@ -38,7 +38,7 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold font-heading leading-tight text-dark">
+          <h1 className="text-5xl md:text-7xl font-extrabold font-heading leading-none text-dark">
             AI Empowering <span className="gradient-text">Your Business</span>{" "}
             with Smart Automation
           </h1>
@@ -55,7 +55,7 @@ export default function HeroSection() {
             </Link>
             <Link
               href="#"
-              className="flex items-center gap-2 px-8 py-4 text-lg font-bold border-2 border-primary/20 rounded-full hover:bg-primary/5 transition-all group"
+              className="flex items-center gap-2 px-8 py-4 h-13  text-lg font-bold border-2 border-primary/20 rounded-full hover:bg-primary/5 transition-all group"
             >
               <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                 <Play size={12} fill="currentColor" />
@@ -112,7 +112,7 @@ export default function HeroSection() {
             className="absolute -top-10 -right-4 md:right-0 bg-white p-4 rounded-2xl shadow-strong border border-blue-50 z-20 max-w-[200px]"
           >
             <div className="flex items-center gap-3">
-              <div className="!w-10  p-1   aspect-square  rounded-full bg-blue-100 flex items-center justify-center text-primary font-bold">
+              <div className="w-10!  p-1   aspect-square  rounded-full bg-blue-100 flex items-center justify-center text-primary font-bold">
                 MK
               </div>
               <div>

@@ -1,37 +1,41 @@
-'use client'
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
-import { cn } from '@/lib/utils'
-import { Menu, X, Zap } from 'lucide-react'
+"use client";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Menu, X, Zap } from "lucide-react";
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Expertise', href: '/features' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Solutions', href: '/contact' },
-]
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Contact", href: "/contact" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handler)
-    return () => window.removeEventListener('scroll', handler)
-  }, [])
+    const handler = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handler);
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
 
   return (
-    <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-      scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-3" : "bg-transparent"
-    )}>
+    <nav
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
+        scrolled
+          ? "bg-white/80 backdrop-blur-md shadow-xs py-3"
+          : "bg-transparent",
+      )}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white shadow-glow group-hover:scale-110 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-linear-to-br from-primary to-primary-light flex items-center justify-center text-white shadow-glow group-hover:scale-110 transition-transform">
             <Zap size={20} fill="currentColor" />
           </div>
           <span className="text-xl font-extrabold font-heading tracking-tight text-dark">
@@ -42,8 +46,8 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
+            <Link
+              key={link.name}
               href={link.href}
               className="relative text-sm font-medium text-gray-600 hover:text-primary transition-colors group"
             >
@@ -61,7 +65,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden p-2 text-dark hover:bg-gray-100 rounded-lg transition-colors"
           onClick={() => setOpen(!open)}
         >
@@ -85,8 +89,8 @@ export default function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
               >
-                <Link 
-                  href={link.href} 
+                <Link
+                  href={link.href}
                   className="text-lg font-semibold text-gray-900"
                   onClick={() => setOpen(false)}
                 >
@@ -94,8 +98,8 @@ export default function Navbar() {
                 </Link>
               </motion.div>
             ))}
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="btn-primary w-full text-center mt-4"
               onClick={() => setOpen(false)}
             >
@@ -105,5 +109,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </nav>
-  )
+  );
 }
