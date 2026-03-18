@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #4f6ef7;
+  --primary-light: #7b96ff;
+  --accent-yellow: #f5c842;
+  --accent-green: #3ddc97;
+  --bg-dark: #0b0e1a;
+  --bg-light: #f4f7ff;
+  --bg-card: #ffffff;
+  --text-primary: #0d1117;
+  --text-secondary: #6b7280;
+  --text-on-dark: #e8eeff;
+  --accent-yellow: #f5c842;
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    #e8eeff 0%,
+    #f4f7ff 60%,
+    #d9e4ff 100%
+  );
+  --gradient-blue: linear-gradient(135deg, #4f6ef7, #7b96ff);
+  --gradient-cta: linear-gradient(135deg, #0b0e1a 0%, #1a2040 100%);
+
+  --shadow-card: 0 4px 24px rgba(79, 110, 247, 0.1);
+  --shadow-strong: 0 8px 40px rgba(79, 110, 247, 0.18);
+
+  --radius: 16px;
+  --radius-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-light);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.gradient-text {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: var(--gradient-blue);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(79, 110, 247, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(79, 110, 247, 0.45);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-strong {
+  box-shadow: var(--shadow-strong);
+}
